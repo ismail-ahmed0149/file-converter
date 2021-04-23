@@ -6,10 +6,26 @@
   <title>File Converter</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-
+  <link rel="stylesheet" type="text/css" href="styles.css"/>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <script>
+    function example(){
+      let input = document.getElementById('file-input');
+      alert(input.value);
+    }
+  </script>
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+    <h1>PDF Converter</h1>
+    <main>
+      <div class="container">
+        <h2>Convert your .docx file here</h2>
+        <button class="btn btn-primary" type="file" id="fileDialogId" onclick="document.querySelector('.inputFile').click();">
+          Search for your .docx file
+        </button>
+        <input id="file-input" class="inputFile" type="file" style="display: none;" onchange="example()"/>
+      </div>
+    </main>
 </body>
 </html>
